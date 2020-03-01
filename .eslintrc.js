@@ -23,13 +23,14 @@ module.exports = {
         'eslint-plugin-import-helpers'
     ],
     "rules": {
+      "import/prefer-default-export": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         'import-helpers/order-imports': [
           'warn',
           {
               newlinesBetween: 'always',
               groups: [
-                  // '/^react/',
+                  '/^react/',
                   'module',
                   '/^@shared/',
                   ['parent', 'sibling', 'index'],

@@ -1,21 +1,63 @@
-import { Link } from 'gatsby';
 import React from 'react';
 
-import Image from '../components/image';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import { useStaticQuery, graphql } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-);
+import Layout from '../components/Layout';
+import smallLarge from '../images/wave-large.png';
+import GlobalStyle from '../styles/global';
+import { Container } from './styles';
 
-export default IndexPage;
+export default function IndexPage() {
+  const data = useStaticQuery(graphql`
+    query {
+      desktop: file(relativePath: { eq: "header-bg.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 1500) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+
+  const backgroundFluidImageStack = [
+    data.desktop.childImageSharp.fluid,
+    'linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%)',
+  ].reverse();
+
+  return (
+    <>
+      <Layout>
+        <Container>
+          <BackgroundImage
+            style={{ height: '100vh' }}
+            fluid={backgroundFluidImageStack}
+          >
+            <h3>The Great Outdoor</h3>
+            <h1>Adventure</h1>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Officia, modi numquam! Cum aliquam quo dolore, esse commodi
+              perspiciatis, expedita facere itaque assumenda ut unde nam
+              quam hic corporis provident ipsum.
+            </p>
+
+            <div className="cta">
+              <a href="/" className="btn">Book Now</a>
+            </div>
+
+            <img
+              className="large-wave"
+              src={smallLarge}
+              alt="Large Wave"
+            />
+          </BackgroundImage>
+        </Container>
+      </Layout>
+
+      <GlobalStyle />
+    </>
+  );
+}
