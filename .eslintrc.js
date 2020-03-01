@@ -19,9 +19,23 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        'eslint-plugin-import-helpers'
     ],
     "rules": {
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        'import-helpers/order-imports': [
+          'warn',
+          {
+              newlinesBetween: 'always',
+              groups: [
+                  // '/^react/',
+                  'module',
+                  '/^@shared/',
+                  ['parent', 'sibling', 'index'],
+              ],
+              alphabetize: { order: 'asc', ignoreCase: true },
+          },
+      ],
     }
 };
