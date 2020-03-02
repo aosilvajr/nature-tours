@@ -5,6 +5,7 @@ import BackgroundImage from 'gatsby-background-image';
 
 import Layout from '../components/Layout';
 import Outdoors from '../components/Outdoors';
+import Testimonial from '../components/Testimonial';
 import smallLarge from '../images/wave-large.png';
 import GlobalStyle from '../styles/global';
 import { Container } from './styles';
@@ -59,9 +60,10 @@ export default function IndexPage() {
               alt="Large Wave"
             />
           </BackgroundImage>
-
-          <Outdoors />
         </Container>
+
+        <Outdoors />
+        <Testimonial />
       </Layout>
 
       <GlobalStyle />

@@ -54,6 +54,7 @@ export const Container = styled.section`
       display: flex;
       cursor: pointer;
       position: relative;
+      border-radius: 10px;
       flex-direction: column;
       justify-content: center;
 
@@ -71,6 +72,7 @@ export const Container = styled.section`
         z-index: -1;
         height: 100%;
         position: absolute;
+        border-radius: 10px;
         background-image: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%);
       }
     }
