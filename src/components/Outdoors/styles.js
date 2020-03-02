@@ -77,4 +77,12 @@ export const Container = styled.section`
       }
     }
   }
+
+  @media screen and (min-width: 700px) {
+    .title-heading {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
 `;

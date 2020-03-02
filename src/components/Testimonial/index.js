@@ -29,7 +29,7 @@ export default function Testimonial() {
   return (
     <Container>
       <BackgroundImage
-        style={{ height: '100vh', backgroundAttachment: 'fixed' }}
+        id="testimonial-image"
         fluid={backgroundFluidImageStack}
       >
         <div className="container">

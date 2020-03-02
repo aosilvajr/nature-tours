@@ -34,7 +34,7 @@ export default function IndexPage() {
       <Layout>
         <Container>
           <BackgroundImage
-            style={{ height: '100vh' }}
+            className="hero"
             fluid={backgroundFluidImageStack}
           >
             <div className="container">

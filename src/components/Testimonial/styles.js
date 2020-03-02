@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+  #testimonial-image,
+  #testimonial-image::before,
+  #testimonial-image::after {
+    height: 100vh;
+    background-attachment: fixed;
+  }
+
   .wave-large-reversed {
     top: 0;
     left: 0;
@@ -31,6 +38,35 @@ export const Container = styled.section`
         border-radius: 100%;
         border: 3px solid #eb648c;
       }
+    }
+  }
+
+  @media screen and (min-width: 350px) {
+    #testimonial-image,
+    #testimonial-image::before,
+    #testimonial-image::after {
+      height: 85vh;
+      background-attachment: fixed;
+    }
+
+    .wave-large-reversed {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5rem;
+      border-bottom: 0;
+      position: absolute;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    .wave-large-reversed {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 7rem;
+      border-bottom: 0;
+      position: absolute;
     }
   }
 `;

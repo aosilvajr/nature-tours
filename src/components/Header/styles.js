@@ -59,4 +59,60 @@ export const Container = styled.header`
       right: 0;
     }
   }
+
+  @media screen and (min-width: 700px) {
+    nav {
+      .nav-brand {
+        width: 3.5rem;
+      }
+
+      .nav-list {
+        top: initial;
+        right: initial;
+        width: initial;
+        height: initial;
+        position: initial;
+        flex-direction: row;
+        background-color: transparent;
+
+        .nav-item {
+          margin: 0 2.5rem;
+        }
+
+        .nav-link, .current {
+          color: #fafafa;
+          position: relative;
+          font-size: 1.3rem;
+        }
+
+        /* Ambos vão ter o mesmo efeito */
+        .nav-link::before,
+        .current::before {
+          content: '';
+          left: 0;
+          width: 100%;
+          height: 2px;
+          bottom: -0.5rem;
+          position: absolute;
+          transform: scaleX(0);
+          transform-origin: left;
+          background-color: #eb648c;
+          transition: transform 650ms;
+        }
+
+        /* Ativa o efeito */
+        .current::before {
+          transform: scaleX(1);
+        }
+
+        .nav-link:hover::before {
+          transform: scaleX(1);
+        }
+      }
+
+      .menu-icon {
+        display: none;
+      }
+    }
+  }
 `;

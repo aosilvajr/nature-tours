@@ -51,7 +51,7 @@ export default function Header() {
             </div>
 
             <li className="nav-item">
-              <a href="/" className="nav-link">Home</a>
+              <a href="/" className="nav-link current">Home</a>
             </li>
             <li className="nav-item">
               <a href="/" className="nav-link">Destinos</a>

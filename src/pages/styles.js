@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+  .hero {
+    height: 100vh;
+  }
+
   .large-wave {
     left: 0;
     bottom: 0;
@@ -38,6 +42,44 @@ export const Container = styled.section`
       :hover {
         background-color: #ce578b;
       }
+    }
+  }
+
+  @media screen and (min-width: 350px) {
+    .hero {
+      height: 90vh;
+    }
+
+    .large-wave {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 5rem;
+      border-bottom: 0;
+      position: absolute;
+    }
+
+    .main-message {
+      transform: translateY(90%);
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    .hero {
+      height: 100vh;
+    }
+
+    .large-wave {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 7rem;
+      border-bottom: 0;
+      position: absolute;
+    }
+
+    .main-message {
+      transform: translateY(130%);
     }
   }
 `;
