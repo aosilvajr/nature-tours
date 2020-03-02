@@ -33,39 +33,41 @@ export default function Header() {
 
   return (
     <Container>
-      <nav>
-        <div className="nav-brand">
-          <a href="/">
-            <Img fluid={logo.childImageSharp.fluid} />
-          </a>
-        </div>
-
-        <div className="menu-icon open">
-          <MdMenu size={24} color="#FFF" />
-        </div>
-
-        <ul className="nav-list">
-          <div className="menu-icon close">
-            <MdClose size={24} color="#eb648c" />
+      <div className="container">
+        <nav>
+          <div className="nav-brand">
+            <a href="/">
+              <Img fluid={logo.childImageSharp.fluid} />
+            </a>
           </div>
 
-          <li className="nav-item">
-            <a href="/" className="nav-link">Home</a>
-          </li>
-          <li className="nav-item">
-            <a href="/" className="nav-link">Destinos</a>
-          </li>
-          <li className="nav-item">
-            <a href="/" className="nav-link">Preços</a>
-          </li>
-          <li className="nav-item">
-            <a href="/" className="nav-link">Bookings</a>
-          </li>
-          <li className="nav-item">
-            <a href="/" className="nav-link">Sobre</a>
-          </li>
-        </ul>
-      </nav>
+          <div className="menu-icon open">
+            <MdMenu size={24} color="#FFF" />
+          </div>
+
+          <ul className="nav-list">
+            <div className="menu-icon close">
+              <MdClose size={24} color="#eb648c" />
+            </div>
+
+            <li className="nav-item">
+              <a href="/" className="nav-link">Home</a>
+            </li>
+            <li className="nav-item">
+              <a href="/" className="nav-link">Destinos</a>
+            </li>
+            <li className="nav-item">
+              <a href="/" className="nav-link">Preços</a>
+            </li>
+            <li className="nav-item">
+              <a href="/" className="nav-link">Bookings</a>
+            </li>
+            <li className="nav-item">
+              <a href="/" className="nav-link">Sobre</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </Container>
   );
 }

@@ -31,5 +31,12 @@ export default createGlobalStyle`
     p {
       font-size: 1.6rem;
     }
+
+    .container {
+      width: 100%;
+      margin: 0 auto;
+      max-width: 98rem;
+      padding: 0 1.5rem;
+    }
   }
 `;
