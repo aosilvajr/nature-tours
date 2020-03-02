@@ -43,14 +43,14 @@ export default function Testimonial() {
             <div className="testimonial-text-box">
               <MdFormatQuote size={90} color="#eb648c" />
               <p>
-                Desenvolvedor FullStack especialista nas ferramentas de
-                desenvolvimento mais modernas atualmente React JS, Node JS e Gatsby JS
+                Desenvolvedor FullStack web e mobile especialista nas ferramentas de
+                desenvolvimento mais modernas atualmente React JS, Node JS e Gatsby JS.
               </p>
             </div>
 
             <div className="testimonial-customer">
               <img src={profile} alt="profile-pic" />
-              <h1>Ailton Jr</h1>
+              <h1>Ailton Jr.</h1>
             </div>
           </div>
         </div>

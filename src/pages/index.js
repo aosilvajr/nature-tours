@@ -3,6 +3,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 
+import Booking from '../components/Booking';
 import Layout from '../components/Layout';
 import Outdoors from '../components/Outdoors';
 import Testimonial from '../components/Testimonial';
@@ -64,6 +65,7 @@ export default function IndexPage() {
 
         <Outdoors />
         <Testimonial />
+        <Booking />
       </Layout>
 
       <GlobalStyle />
