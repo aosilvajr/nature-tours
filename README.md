@@ -11,7 +11,7 @@
 
 <p align="center">
 	<kbd>
-		<img style="border-radius: 5px" alt="Banner" src="src/images/screenshots/cacilds-store-banner.png" />
+		<img style="border-radius: 5px" alt="Banner" src="src/images/screenshots/nature-tours-banner.png" />
 	</kbd>
 	<kbd>
 		<img style="border-radius: 5px" alt="Departments" src="src/images/screenshots/nature-tours-cards.png" />
